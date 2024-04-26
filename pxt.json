@@ -1,26 +1,32 @@
 {
     "name": "bluetooth",
-    "description": "",
+    "description": "Bluetooth services",
     "dependencies": {
         "core": "*"
     },
     "files": [
-        "main.ts",
         "README.md",
         "enums.d.ts",
+        "shims.d.ts",
         "bluetooth.ts",
-        "shims.d.ts"
+        "bluetooth.cpp",
+        "BLEHF2Service.h",
+        "BLEHF2Service.cpp"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
+    "public": true,
     "targetVersions": {
-        "target": "4.0.29",
-        "targetId": "calliopemini"
+        "target": "6.0.28",
+        "pxt": "9.0.15"
     },
-    "supportedTargets": [
-        "calliopemini"
-    ],
-    "preferredEditor": "tsprj",
-    "languageRestriction": "javascript-only"
+    "weight": 10,
+    "searchOnly": true,
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 1
+                }
+            }
+        }
+    }
 }
